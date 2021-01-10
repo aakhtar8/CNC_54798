@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIAIC JS Assignment 4</title>
+</head>
+<body>
+    <h2>Making a simple Calculator</h2>
+    <script>
+        var num1;
+        var num2;
+        var operation;
+        var result = new Number();
+        num1 = prompt("Enter first value");
+        num2 = prompt("Enter second value");
+        num1 = Number(num1);
+        num2 = Number(num2);
+        operation = prompt("enter desired calculation");
+        if (operation === "+") {
+            result = num1 + num2;
+        }
+        else if (operation === "-") {
+            result = num1 - num2;
+        }
+        else if (operation === "*") {
+            result = num1 * num2;
+        }
+        else if (operation === "/") {
+            result = num1 / num2;
+        }
+        else if (operation === "%") {
+            result = num1 % num2;
+        }
+        else {
+            alert("Enter a valid operator. e.g., +, -");
+        }
+        alert(num1 + operation + num2 + " = " + result);
+    </script>
+</body>
+</html>
