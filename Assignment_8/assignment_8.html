@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIAIC JS Assignment 8</title>
+</head>
+<body>
+    <h2>Handling Date Object</h2>
+    <script>
+        var name = prompt("Type your name");
+        var DOB_year = prompt("What is your DOB year");
+        var DOB_month = prompt("What is your DOB month");
+        var DOB_day = prompt("What is your DOB day");
+        var today = new Date();
+        var birthday = new Date(DOB_month + " " + DOB_day + ", " + DOB_year);
+        console.log(birthday);
+        var ageInHours = Math.floor((today.getTime() - birthday.getTime())/(1000*3600));
+        var ageInDays = Math.floor((ageInHours/24));
+        var ageInYears = Math.floor((ageInDays/365));
+        console.log("Hello " + name);
+        console.log("you are " + ageInYears + " years old");
+        console.log("your age in days is " + ageInDays + " days");
+        console.log("your age in hours is " + ageInHours + " hours");
+        var nxtBirthday = new Date(DOB_month + " " + DOB_day + ", " + today.getFullYear().toString());
+        var daysFromBirthday = Math.floor((nxtBirthday.getTime() - today.getTime())/(1000 * 3600 * 24));
+        if (daysFromBirthday === 0) {
+            console.log("Happy Birthday " + name);
+        }
+        else if (daysFromBirthday < 0) {
+            // birthday has passed next birthday will be next year
+            var nextYear = new Date(birthday.setFullYear(today.getFullYear() + 1));
+            daysFromBirthday = Math.floor((nextYear.getTime() - today.getTime())/(1000 * 3600 *24));
+            console.log("your birthday Duration days " + daysFromBirthday);
+        }
+        else {
+            console.log("your birthday Duration days " + daysFromBirthday);
+        }
+
+    </script>
+</body>
+</html>
