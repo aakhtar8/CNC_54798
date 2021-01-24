@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIAIC JS Assignment 5</title>
+</head>
+<body>
+    <h2>Array operation in JS</h2>
+    <script>
+        var courses = [];
+        var course1 =prompt("course 1", "computer");
+        var course2 =prompt("course 2", "math");
+        var course3 =prompt("course 3", "urdu");
+        var course4 =prompt("course 4", "physics");
+        var course5 =prompt("course 5", "chemistry");
+        courses.push(course1, course2, course3, course4, course5);
+        alert(courses);
+        course1 = prompt("course 1", courses[0]);
+        if (course1 !== courses[0]) {
+            courses.splice(0,1, course1);
+        }
+        course2 = prompt("course 2", courses[1]);
+        if (course2 !== courses[1]) {
+            courses.splice(1,1, course2);
+        }
+        course3 = prompt("course 3", courses[2]);
+        if (course3 !== courses[2]) {
+            courses.splice(2,1, course3);
+        }
+        course4 = prompt("course 4", courses[3]);
+        if (course4 !== courses[3]) {
+            courses.splice(3,1, course4);
+        }
+        course5 = prompt("course 5", courses[4]);
+        if (course5 !== courses[4]) {
+            courses.splice(4,1, course1);
+        }
+        alert(courses);
+    </script>
+</body>
+</html>
