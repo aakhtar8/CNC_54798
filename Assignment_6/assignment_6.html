@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIAIC JS Assignment 6</title>
+</head>
+<body>
+    <h2>Array operation in JS</h2>
+    <script>
+        var courses = [];
+        var defaultCourses = ["computer", "math", "physics", "urdu", "chemistry"];
+        for (var i = 0; i <=4; i++); {
+            var currentCourse = prompt("course ",i+1," ",defaultCourses[i] );
+            courses.push(currentCourse);
+            }
+        alert(courses);
+        for (var i = 0; i <=4; i++); {
+            var currentCourse = prompt("course ",i+1," ",courses[i] );
+            if (currentCourse !== courses[i]) {
+            courses.splice(i,1, currentCourse);
+            }
+        }
+        alert(courses);
+    </script>
+</body>
+</html>

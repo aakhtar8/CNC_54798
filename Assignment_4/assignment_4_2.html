@@ -8,13 +8,31 @@
 <body>
     <h2>Making a percentage Calculator</h2>
     <script>
-        var obtainedMarks;
-        var totalMarks = 500;
-        var percentage;
-        obtainedMarks =prompt("Enter your total marks in 5 courses");
-        obtainedMarks = Number(obtainedMarks);
-        percentage = obtainedMarks * 100/totalMarks;
-        alert("Your percentage is " + percentage + " %");
+        var chem = prompt("Enter your chemistry marks..");
+        var eng = prompt("Enter your english marks..");
+        var urdu = prompt("Enter your urdu marks..");
+        var totalmarks = prompt("Enter total possible marks..");
+        console.log("totalMarks = ", totalmarks);
+        var obtained_marks_total = parseFloat(chem) + parseFloat(eng) + parseFloat(urdu);
+        console.log("Total Marks Obtained = ", obtained_marks_total);
+        var percentage = obtained_marks_total/parseFloat(totalmarks)*100.0;
+        console.log("percentage = " + percentage + " %");
+        if (percentage >= 80.0) {
+            console.log("Grade: A");
+            console.log("Excellent");
+        }
+        else if (percentage >= 70.0) {
+            console.log("Grade: B");
+            console.log("Good");
+        }
+        else if (percentage >= 60.0) {
+            console.log("Grade: C");
+            console.log("Satisfactory");
+        }
+        else {
+            console.log("Grade: D");
+            console.log("You need to improve your grades");
+        }
     </script>
 </body>
 </html>
