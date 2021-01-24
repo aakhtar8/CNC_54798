@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIAIC JS Assignment 7</title>
+</head>
+<body>
+    <h2>Mainpulating strings and numbers</h2>
+    <script>
+        var text = "This is some text"
+        var max_number = text.length;
+        var usrNumber = prompt("Enter a number below " + max_number);
+        usrNumber = Math.ceil(usrNumber);
+        console.log("usrNumber =", usrNumber);
+        var sliced_text = text.slice(0, usrNumber);
+        console.log("sliced_text = ", sliced_text);
+        var reversed_text;
+        reversed_text = sliced_text[usrNumber-1] + sliced_text.slice(1, usrNumber-1) + sliced_text[0];
+        console.log("reversed_text = ", reversed_text);
+        alert(reversed_text);
+        // part 2
+        var usrInput = prompt("Enter some text");
+        usrInput = usrInput[0].toUpperCase() + usrInput.slice(1);
+        for (var i = 1; i < usrInput.length; i++) {
+            if (usrInput[i] === " ") {
+                usrInput = usrInput.slice(0, i + 1) + usrInput[i + 1].toUpperCase() + usrInput.slice(i + 2);
+            } 
+        }
+        console.log(usrInput);
+    </script>
+</body>
+</html>
