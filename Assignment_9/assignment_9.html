@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIAIC JS Assignment 9</title>
+</head>
+<body>
+    <h2>Using functions</h2>
+    <script>
+        // function for calculating factorial
+        function factorize(digit) {
+            var result = 1;
+            if (digit > 0) {
+                for (i = digit; i > 0; i--) {
+                    result = result * i;
+                }
+                return result;
+            }
+            else if (digit === 0) {
+                return result;
+            }
+            else {
+                alert("Factorial of -ve number is not possible");
+            }
+        }
+        // function for capitalizing
+        function capiltalize(usrInput) {
+            usrInput = usrInput[0].toUpperCase() + usrInput.slice(1);
+        for (var i = 1; i < usrInput.length; i++) {
+            if (usrInput[i] === " ") {
+                usrInput = usrInput.slice(0, i + 1) + usrInput[i + 1].toUpperCase() + usrInput.slice(i + 2);
+            } 
+        }
+        return usrInput;
+        }
+
+        // functions implementation
+        var usrNumber = prompt("Enter a number");
+        usrNumber = parseInt(usrNumber);
+        var factorial = factorize(usrNumber);
+        console.log("factorial = ", factorial);
+        var usrString = prompt("Enter your text here");
+        var caped_text = capiltalize(usrString);
+        console.log("Capitalized text: ", caped_text);
+    </script>
+</body>
+</html>
