@@ -1,0 +1,37 @@
+<html>
+<head>
+		 <title>HTML Assignment 7</title>
+</head>
+<body>
+	<h1>Chapter # 7: Forms</h1>
+	<form action = "www.piaic.org" method="post">
+		<fieldset>
+			<legend>Your Details:</legend>
+			<p>Name:
+				<input type="text" name="name" size="25" maxlength="30">
+			</p>
+			<p>Email:
+			<input type="email" name="email" size="25" maxlength="30">
+			</p>
+		</fieldset>
+		<br />
+		<fieldset>
+			<legend>Your Review:</legend>
+			<p>How did you hear about us?
+				<select name="resource">
+				<option value = "google">Google</option>
+				<option value = "advert">Advert</option>
+				<option value = "friend">Friend</option>
+				</select>
+			</p>
+			<p>Would you visit again?</p>
+			<input type = "radio" name = "recurer" value = "yes" />Yes
+			<input type = "radio" name = "recurer" value = "no" />No
+			<input type = "radio" name= "recurer" value = "may be" />May be
+			<p>Comments:</p>
+			<textarea name = "comments" cols = 20 rows = 3></textarea>
+			<p><input type = "checkbox" name="subscription" value = "yes" checked = "checked">Sign me up for email updates</p>
+			<p><input type="submit" name="submit" value="Submit Reivew" /></p>
+		</fieldset>
+	</form>
+</body>
